@@ -50,7 +50,7 @@ body {
 
 /* Banner */
 .banner {
-  background-image: url("../Photos/banner.png"); /* غيّر هذا إلى صورة البانر مالتك */
+  background-image: url("Photos/banner.png"); /* غيّر هذا إلى صورة البانر مالتك */
   background-size: cover;
   background-position: center;
   height: 450px;
