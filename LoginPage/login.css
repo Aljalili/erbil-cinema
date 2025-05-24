@@ -1,0 +1,171 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: white;
+}
+
+.logo-img {
+  height: 50px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-text {
+  font-size: 28px;
+  font-family: 'Cursive', sans-serif;
+  color: #e50914;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 4px black;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e1e1e;
+  padding: 20px 50px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #e50914;
+}
+
+.login-section {
+  max-width: 400px;
+  margin: 50px auto;
+  background-color: #1e1e1e;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.login-section h1 {
+  color: #e50914;
+  margin-bottom: 30px;
+}
+
+.login-form,
+.register-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form label,
+.register-form label {
+  text-align: left;
+  margin: 10px 0 5px;
+}
+
+.login-form input,
+.register-form input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.login-form button,
+.register-form button {
+  background-color: #e50914;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  margin-top: 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-form button:hover,
+.register-form button:hover {
+  background-color: #b2060d;
+}
+
+.switch {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.switch a {
+  color: #e50914;
+  text-decoration: underline;
+}
+input, select {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .banner-content h1 {
+    font-size: 28px;
+  }
+
+  .banner-content h2 {
+    font-size: 36px;
+  }
+
+  .explore-btn {
+    width: 90%;
+  }
+
+  .movie-thumbnails {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .movie-thumbnails img {
+    width: 80%;
+    height: auto;
+  }
+
+  .login-section, .contact-section {
+    margin: 30px 10px;
+    padding: 20px;
+  }
+
+  .login-form input,
+  .register-form input,
+  .contact-form input,
+  .contact-form textarea,
+  select {
+    width: 100%;
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reserve Tickets - Erbil Cinema</title>
+  <link rel="stylesheet" href="reservation.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="../Photos/LogoCinema.png" alt="Logo" class="logo-img">
+        <span class="logo-text">Erbil Cinema</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="../HomePage/index.html">Home</a></li>
+        <li><a href="../MoviesPage/movies.html">Movies</a></li>
+        <li><a href="../ResevationPage/reservation.html">Reservation</a></li>
+        <li><a href="../ContactPage/contact.html">Contact Us</a></li>
+        <li><a href="../LoginPage/login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="reservation-section">
+    <h1>Reserve Your Seat</h1>
+    <form class="reservation-form">
+      <label for="movie">Select Movie:</label>
+      <select id="movie" name="movie" required>
+        <option value="">-- Choose a Movie --</option>
+        <option value="batman">The Batman</option>
+        <option value="500days">500 Days of Summer</option>
+        <option value="interstellar">Interstellar</option>
+        <option value="joker">Joker 2</option>
+        <option value="lucy">Lucy</option>
+        <option value="oppenheimer">Oppenheimer</option>
+        <option value="titanic">Titanic</option>
+        <option value="twisters">Twisters</option>
+      </select>
+
+      <label for="time">Showtime:</label>
+      <select id="time" name="time" required>
+        <option value="">-- Choose Time --</option>
+        <option value="10am">10:00 AM</option>
+        <option value="1pm">1:00 PM</option>
+        <option value="4pm">4:00 PM</option>
+        <option value="7pm">7:00 PM</option>
+        <option value="10pm">10:00 PM</option>
+      </select>
+
+      <label for="tickets">Number of Tickets:</label>
+      <input type="number" id="tickets" name="tickets" min="1" max="10" required>
+
+      <button type="submit">Confirm Reservation</button>
+    </form>
+  </section>
+<script>
+  // نقرأ اسم الفلم من الرابط
+  const params = new URLSearchParams(window.location.search);
+  const selectedMovie = params.get("movie");
+
+  if (selectedMovie) {
+    const movieSelect = document.getElementById("movie");
+    movieSelect.value = selectedMovie;
+  }
+</script>
+
+</body>
+</html>
